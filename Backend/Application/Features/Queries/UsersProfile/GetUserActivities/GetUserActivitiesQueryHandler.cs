@@ -32,9 +32,9 @@ namespace Application.Features.Queries.UsersProfile.GetUserActivities
 
             query = request.Predicate switch
             {
-                "past" => query.Where(d => d.Date <= DateTime.Now),
+                "past" => query.Where(d => d.Date <= DateTime.UtcNow),
                 "hosting" => query.Where(h => h.HostUsername == request.Username),
-                _ => query.Where(d => d.Date >= DateTime.Now)
+                _ => query.Where(d => d.Date >= DateTime.UtcNow)
             };
 
             var activities = await query.ToListAsync();

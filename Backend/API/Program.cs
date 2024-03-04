@@ -34,6 +34,10 @@ if (app.Environment.IsDevelopment())
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+app.MapFallbackToController("Index", "Fallback");
+
 app.UseCors("CorsPolicy");
 
 app.MapControllers();

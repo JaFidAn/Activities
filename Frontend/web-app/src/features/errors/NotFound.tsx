@@ -12,7 +12,7 @@ export default function NotFound() {
     <Segment placeholder>
       <Header icon>
         <Icon name="search" />
-        Oops = we've looked everywhere but could not fing what you are loking
+        Oops!!! we've looked everywhere but could not fing what you are loking
         for
       </Header>
       <SegmentInline>
